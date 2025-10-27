@@ -118,7 +118,66 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
-        /* --- Bloc 3: Collections --- */
+        /* --- Bloc 3: Meilleurs Ventes --- */
+        .best-sellers {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #fff;
+        }
+
+        .best-sellers h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px; /* Taille fixe pour la démonstration */
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-info h4 {
+            font-size: 1.1rem;
+            margin: 0 0 5px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-info p {
+            font-size: 1rem;
+            color: #007bff;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* --- Bloc 4: Collections --- */
         .collections {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -141,11 +200,11 @@
         }
 
         .collection-card:nth-child(1) {
-             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1618169475139-953961734997?q=80&w=1887&auto=format&fit=crop'); /* Image pour Montres */
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1618169475139-953961734997?q=80&w=1887&auto=format&fit=crop'); /* Image pour Montres */
         }
         
         .collection-card:nth-child(2) {
-             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1611652022417-a5511b931622?q=80&w=1887&auto=format&fit=crop'); /* Image pour Bijoux */
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1611652022417-a5511b931622?q=80&w=1887&auto=format&fit=crop'); /* Image pour Bijoux */
         }
 
         .collection-card h3 {
@@ -168,7 +227,7 @@
         }
 
 
-        /* --- Bloc 4: Rassurance --- */
+        /* --- Bloc 5: Rassurance --- */
         .reassurance {
             background-color: #fff;
             padding: 60px 0;
@@ -237,6 +296,9 @@
             .collections {
                 grid-template-columns: 1fr;
             }
+            .reassurance-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
     </style>
@@ -244,7 +306,7 @@
 <body>
 
     <header class="banner">
-        <h2>Style Intemporel</h2> <h1>Milliardstore - Montres qui ne se démodent jamais</h1> <p>Printemps - été 2025</p> <a href="#collections" class="cta-button">Découvrez</a> </header>
+        <h2>Style Intemporel</h2> <h1>Milliardstore - Montres qui ne se démodent jamais</h1> <p>Printemps - été 2025</p> <a href="#best-sellers" class="cta-button">Découvrez Nos Montres</a> </header>
 
     <main>
         <section class="categories container">
@@ -254,6 +316,83 @@
                 <a href="#"><h3>Montres pour femmes →</h3></a> <a href="#"><h3>Montres pour enfants →</h3></a> <a href="#"><h3>Montres pour hommes →</h3></a> <a href="#"><h3>Montres connectées →</h3></a> <a href="#"><h3>Montres spéciales →</h3></a> </div>
         </section>
 
+        <section id="best-sellers" class="best-sellers">
+            <div class="container">
+                <h2>NOS MEILLEURES VENTES MILLIARDSTORE</h2>
+                <div class="product-grid">
+                    <a href="#" class="product-card">
+                        <img src="image_e24461.jpg" alt="Montre Ingersoll à double tourbillon">
+                        <div class="product-info">
+                            <h4>Ingersoll The Jazz</h4>
+                            <p>349.99 €</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <img src="image_e24846.jpg" alt="Montre Daniel Wellington verte et or rose">
+                        <div class="product-info">
+                            <h4>Diva Malachite</h4>
+                            <p>159.50 €</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <img src="image_e24883.jpg" alt="Montre de luxe Richard Mille Squelette">
+                        <div class="product-info">
+                            <h4>Extreme Chrono R.M.</h4>
+                            <p>Prix sur demande</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <img src="image_e24487.jpg" alt="Montre Chronographe Lotus Cuir Marron">
+                        <div class="product-info">
+                            <h4>Lotus Chrono Élégance</h4>
+                            <p>135.00 €</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <img src="image_e24809.jpg" alt="Montre Festina Chronographe Or et Bleu">
+                        <div class="product-info">
+                            <h4>Festina Plongeur Or</h4>
+                            <p>199.99 €</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <img src="image_e24425.png" alt="Montre Homme Classique Bracelet Cuir">
+                        <div class="product-info">
+                            <h4>Classique Épuré</h4>
+                            <p>95.00 €</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <img src="image_e24788.jpg" alt="Montre Chronographe Lotus Cuir Bleu">
+                        <div class="product-info">
+                            <h4>Lotus Sport Bleu</h4>
+                            <p>145.00 €</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <img src="image_e247e8.jpg" alt="Montre GPS Sport de Randonnée">
+                        <div class="product-info">
+                            <h4>Smart Outdoor Pro</h4>
+                            <p>289.00 €</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <img src="https://images.unsplash.com/photo-1542496658-e3253b21045c?q=80&w=250&h=200&auto=format&fit=crop" alt="Montre Élégante Acier et Or">
+                        <div class="product-info">
+                            <h4>Classique Or (Générique)</h4>
+                            <p>89.99 €</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product-card">
+                        <img src="https://images.unsplash.com/photo-1549445100-349079a02562?q=80&w=250&h=200&auto=format&fit=crop" alt="Montre Bracelet Mailles">
+                        <div class="product-info">
+                            <h4>Maille Milanaise</h4>
+                            <p>79.99 €</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
         <section id="collections" class="collections container">
             <div class="collection-card"> <h3>MONTRES</h3> <a href="#">JE DÉCOUVRE →</a> </div>
             <div class="collection-card">
@@ -263,11 +402,11 @@
         <section class="reassurance container">
             <div class="reassurance-grid">
                 <div class="reassurance-item">
-                    <h4>Livraison rapide</h4> <p>Recevez vos commandes rapidement grâce à notre service de livraison express, partout en France.</p> </div>
+                    <h4>Livraison Express en -3 jours</h4> <p>**Recevez vos montres en moins de 3 jours !** Notre service de livraison express est rapide partout en France.</p> </div>
                 <div class="reassurance-item">
-                    <h4>Paiement sécurisé</h4> <p>Achetez en toute confiance avec notre système de paiement sécurisé.</p> </div>
+                    <h4>Paiement 100% Sécurisé</h4> <p>Achetez en toute confiance. Toutes vos transactions sont traitées par des systèmes de paiement entièrement sécurisés.</p> </div>
                 <div class="reassurance-item">
-                    <h4>Meilleure qualité</h4> <p>Profitez de la qualité exceptionnelle de nos produits, sélectionnés avec soin.</p> </div>
+                    <h4>Meilleure qualité</h4> <p>Profitez de la qualité exceptionnelle de nos produits, sélectionnés avec soin par les experts Milliardstore.</p> </div>
             </div>
         </section>
     </main>
